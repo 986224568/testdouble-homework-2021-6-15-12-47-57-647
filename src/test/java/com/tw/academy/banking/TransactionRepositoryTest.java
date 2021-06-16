@@ -23,7 +23,7 @@ public class TransactionRepositoryTest {
     }
 
     @Test
-    void should_add_transaction_when_call_addDeposit() {
+    void should_return_all_transactions_when_call_allTransactions() {
         MockitoAnnotations.openMocks(this);
         // given
 
