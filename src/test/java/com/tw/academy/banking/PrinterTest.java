@@ -14,6 +14,7 @@ import java.util.List;
 
 import static com.tw.banking.Clock.DATE_FORMAT;
 import static com.tw.banking.Printer.STATEMENT_HEADER;
+import static org.mockito.ArgumentMatchers.any;
 
 public class PrinterTest {
     @Mock
@@ -29,9 +30,12 @@ public class PrinterTest {
         int amount = 1;
         Transaction transaction = new Transaction(date, amount);
         transactions.add(transaction);
+        transactions.add(transaction);
+        transactions.add(transaction);
+        transactions.add(transaction);
         // when
         printer.print(transactions);
         // then
-        Mockito.verify(console, Mockito.times(1)).printLine(STATEMENT_HEADER);
+        Mockito.verify(console, Mockito.times(1 + transactions.size())).printLine(any());
     }
 }
