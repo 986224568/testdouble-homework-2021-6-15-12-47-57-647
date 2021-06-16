@@ -26,4 +26,11 @@ public class AccountTest {
         Mockito.verify(transactionRepository, Mockito.times(1)).addDeposit(amount);
     }
 
+    @Test
+    void should_call_addWithdraw_from_repository_when_call_addWithdraw_in_account() {
+        // given
+        // when
+        // then
+    }
+
 }
