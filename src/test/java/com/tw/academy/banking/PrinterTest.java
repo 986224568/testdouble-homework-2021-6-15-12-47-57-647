@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.tw.banking.Clock.DATE_FORMAT;
-import static com.tw.banking.Printer.STATEMENT_HEADER;
 import static org.mockito.ArgumentMatchers.any;
 
 public class PrinterTest {
