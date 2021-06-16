@@ -3,16 +3,13 @@ package com.tw.academy.banking;
 import com.tw.banking.Clock;
 import com.tw.banking.Transaction;
 import com.tw.banking.TransactionRepository;
-import org.joda.time.LocalDate;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static com.tw.banking.Clock.DATE_FORMAT;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TransactionRepositoryTest {
