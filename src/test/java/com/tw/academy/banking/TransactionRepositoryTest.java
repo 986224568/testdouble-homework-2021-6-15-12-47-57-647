@@ -1,11 +1,19 @@
 package com.tw.academy.banking;
 
 import com.tw.banking.Clock;
+import com.tw.banking.Transaction;
 import com.tw.banking.TransactionRepository;
+import org.joda.time.LocalDate;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.tw.banking.Clock.DATE_FORMAT;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TransactionRepositoryTest {
     @Mock
@@ -26,11 +34,11 @@ public class TransactionRepositoryTest {
     void should_return_all_transactions_when_call_allTransactions() {
         MockitoAnnotations.openMocks(this);
         // given
-
+        TransactionRepository transactionRepository = new TransactionRepository(clock);
         // when
-
+        List<Transaction> transactions = transactionRepository.allTransactions();
         // then
-
+        assertEquals(0, transactions.size());
     }
 
     @Test
