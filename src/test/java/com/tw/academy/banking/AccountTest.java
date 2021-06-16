@@ -38,4 +38,12 @@ public class AccountTest {
         Mockito.verify(transactionRepository, Mockito.times(1)).addWithdraw(amount);
     }
 
+    @Test
+    void should_call_allTransactions_from_repository_when_call_printStatement_in_account() {
+        MockitoAnnotations.openMocks(this);
+        // given
+        // when
+        // then
+    }
+
 }
