@@ -14,11 +14,16 @@ public class TransactionTest {
     @Test
     void should_return_minus_1_when_transactionA_earlier_than_transactionB() {
         // given
+        String date = LocalDate.now().toString(DATE_FORMAT);
+        String date1 = LocalDate.now().plusDays(1).toString(DATE_FORMAT);
+        int amount = 1;
+        Transaction transactionA = new Transaction(date, amount);
+        Transaction transactionB = new Transaction(date1, amount);
 
         // when
+        int result = transactionA.compareTo(transactionB);
 
         // then
-
+        assertEquals(-1, result);
     }
-
 }
