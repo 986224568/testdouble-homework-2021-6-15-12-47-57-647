@@ -23,6 +23,17 @@ public class TransactionRepositoryTest {
     }
 
     @Test
+    void should_add_transaction_when_call_addDeposit() {
+        MockitoAnnotations.openMocks(this);
+        // given
+
+        // when
+
+        // then
+
+    }
+
+    @Test
     void should_call_todayAsString_when_call_addWithdraw() {
         MockitoAnnotations.openMocks(this);
         // given
