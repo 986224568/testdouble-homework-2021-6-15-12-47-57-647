@@ -42,8 +42,12 @@ public class AccountTest {
     void should_call_allTransactions_from_repository_when_call_printStatement_in_account() {
         MockitoAnnotations.openMocks(this);
         // given
+        Account account = new Account(transactionRepository, printer);
+        int amount = 1;
         // when
+        account.printStatement();
         // then
+        Mockito.verify(transactionRepository, Mockito.times(1)).allTransactions();
     }
 
 }
