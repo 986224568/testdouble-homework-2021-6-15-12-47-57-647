@@ -26,7 +26,11 @@ public class TransactionRepositoryTest {
     void should_call_todayAsString_when_call_addWithdraw() {
         MockitoAnnotations.openMocks(this);
         // given
+        TransactionRepository transactionRepository = new TransactionRepository(clock);
+        int mount = 1;
         // when
+        transactionRepository.addWithdraw(mount);
         // then
+        Mockito.verify(clock, Mockito.times(1)).todayAsString();
     }
 }
