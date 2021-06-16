@@ -39,4 +39,13 @@ public class TransactionTest {
         // then
         assertEquals(1, result);
     }
+
+    @Test
+    void should_return_1_when_transactionA_and_transactionB_are_using_same_date() {
+        // given
+
+        // when
+
+        // then
+    }
 }
