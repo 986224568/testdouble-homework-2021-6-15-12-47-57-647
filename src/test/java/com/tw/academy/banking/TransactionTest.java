@@ -4,9 +4,6 @@ import com.tw.banking.Transaction;
 import org.joda.time.LocalDate;
 import org.junit.jupiter.api.Test;
 
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 import static com.tw.banking.Clock.DATE_FORMAT;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -25,5 +22,14 @@ public class TransactionTest {
 
         // then
         assertEquals(-1, result);
+    }
+
+    @Test
+    void should_return_1_when_transactionA_later_than_transactionB() {
+        // given
+
+        // when
+
+        // then
     }
 }
